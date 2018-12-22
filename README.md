@@ -1,5 +1,3 @@
-# Shape-Up-or-Shape-Out
-
 # Shape Up Or Shape Out
 Covalence
 
