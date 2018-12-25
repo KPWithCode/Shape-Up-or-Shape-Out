@@ -6,3 +6,13 @@ class Shape {
         this.div.classList.add('shape');
     }
 }
+
+class Circle extends Shape {
+    constructor(radius) {
+        super(radius,radius);
+            this.radius = radius;
+            this.radius.classList.add('circle');
+        
+
+    }
+}
