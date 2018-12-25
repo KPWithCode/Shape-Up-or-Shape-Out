@@ -23,3 +23,11 @@ class Triangle extends Shape{
     }
 }
 
+class Rectangle extends Shape   {
+    constructor(width, height) {
+        super(width,height);
+        this.classList = 'rectangle';
+
+    }
+}
+
