@@ -16,3 +16,10 @@ class Circle extends Shape {
 
     }
 }
+
+class Triangle extends Shape{
+    constructor(height) {
+        super(height,height)
+    }
+}
+
