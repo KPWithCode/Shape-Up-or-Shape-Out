@@ -49,14 +49,14 @@ squareBtn.addEventListener('click', () =>  {
 
 })
 rectangleBtn.addEventListener('click', () =>  {
-    new Square
+    new Rectangle
 
 })
 circleBtn.addEventListener('click', () =>  {
-    new Square
+    new Circle
 
 })
 trinagleBtn.addEventListener('click', () =>  {
-    new Square
+    new Triangle
 
 })
