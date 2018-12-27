@@ -45,18 +45,18 @@ let circleBtn = document.getElementsByClassName('circle');
 let triangleBtn = document.getElementsByClassName('triangle');
 //Buttons 
 squareBtn.addEventListener('click', () =>  {
-    new Square
+    new Square(document.getElementsByClassName('square').placeholder.value)
 
 })
 rectangleBtn.addEventListener('click', () =>  {
-    new Rectangle
+    new Rectangle(document.getElementsByClassName('rectangle').placeholder.value)
 
 })
 circleBtn.addEventListener('click', () =>  {
-    new Circle
+    new Circle(document.getElementsByClassName('circle').placeholder.value)
 
 })
-trinagleBtn.addEventListener('click', () =>  {
-    new Triangle
+triangleBtn.addEventListener('click', () =>  {
+    new Triangle(document.getElementsByClassName('triangle').placeholder.value)
 
 })
