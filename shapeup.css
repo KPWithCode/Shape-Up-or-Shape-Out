@@ -1,7 +1,7 @@
 #allShapes {
     width: 600px;
     height: 600px;
-    background-color: bisque;
+    background-color:bisque;
     position: relative;
 }
 
@@ -27,3 +27,8 @@
     position: absolute;
 }
 
+.sidebar    {
+    position:absolute;
+   
+    
+}
