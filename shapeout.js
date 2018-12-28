@@ -50,20 +50,21 @@ let rectangleHeight = document.getElementById('rectHeight')
 let rectangleWidth = document.getElementById('rectWidth')
 let circleRadius = document.getElementById('circleRadius')
 let triangleHeight = document.getElementById('triHeight')
+
 //Buttons 
 squareBtn.addEventListener('click', () =>  {
-    new Square(document.getElementsByClassName('square').placeholder.value)
+    new Square(sideLength.value)
 
 })
 rectangleBtn.addEventListener('click', () =>  {
-    new Rectangle(document.getElementsByClassName('rectangle').placeholder.value)
+    new Rectangle(rectangleHeight.value)
 
 })
 circleBtn.addEventListener('click', () =>  {
-    new Circle(document.getElementsByClassName('circle').placeholder.value)
+    new Circle(circleRadius.value)
 
 })
 triangleBtn.addEventListener('click', () =>  {
-    new Triangle(document.getElementsByClassName('triangle').placeholder.value)
+    new Triangle(triangleHeight.value)
 
 })
