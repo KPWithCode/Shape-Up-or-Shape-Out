@@ -11,7 +11,7 @@ class Circle extends Shape {
     constructor(radius) {
         super(radius, radius);
         this.radius = radius;
-        this.radius.classList.add('circle');
+        this.div.classList.add('circle');
 
 
     }
@@ -26,14 +26,14 @@ class Triangle extends Shape {
 class Rectangle extends Shape {
     constructor(width, height) {
         super(width, height);
-        this.classList = 'rectangle';
+        this.div.classList = 'rectangle';
 
     }
 }
 
 class Square extends Shape {
     constructor(sideLength) {
-        super(side, side);
+        super(sideLength, sideLength);
         this.classList = 'square'
     }
 }
@@ -43,6 +43,13 @@ let squareBtn = document.getElementsByClassName('square');
 let rectangleBtn = document.getElementsByClassName('rectangle');
 let circleBtn = document.getElementsByClassName('circle');
 let triangleBtn = document.getElementsByClassName('triangle');
+
+// All inputs
+let sideLength = document.getElementById('sideLength')
+let rectangleHeight = document.getElementById('rectHeight')
+let rectangleWidth = document.getElementById('rectWidth')
+let circleRadius = document.getElementById('circleRadius')
+let triangleHeight = document.getElementById('triHeight')
 //Buttons 
 squareBtn.addEventListener('click', () =>  {
     new Square(document.getElementsByClassName('square').placeholder.value)
