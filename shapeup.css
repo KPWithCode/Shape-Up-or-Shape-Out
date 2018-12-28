@@ -1,34 +1,78 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+div{
+    display: flex;
+    justify-content: space-around;
+    
+}
+input {
+    display: flex;
+    align-content: space-around;
+    margin: 1px;
+
+}
+
+
 #allShapes {
+    display: inline-block;
     width: 600px;
     height: 600px;
-    background-color:bisque;
+    background-color: bisque;
     position: relative;
+    color: black;
+    margin-top: 100px;
+    position:relative;
 }
 
 .square {
+
     background-color: red;
-    position: absolute;
+    color: black;
+    position:absolute;
+    margin-top: 50px;
 }
 
 .rectangle {
+
     background-color: green;
+    color: black;
     position: absolute;
-    width: 300px;
-    height: 100px;
+    margin-right: 200px;
+    /* width: 300px;
+    height: 100px; */
 }
 
 .circle {
+
     background-color: purple;
+    color: black;
     position: absolute;
+    margin-top: 25px;
+    
+    
 }
 
 .triangle {
+
     background-color: yellow;
+    color: black;
     position: absolute;
+    margin-top: 80px;
 }
 
-.sidebar    {
-    position:absolute;
-   
-    
+.sidebar {
+    position: absolute;
+    margin-left: 400px;
+    margin-top: 200px;
+    width: 200px;
+}
+
+li {
+    display: flex;
+    align-content: space-between;
+    margin-top: 10px
 }
