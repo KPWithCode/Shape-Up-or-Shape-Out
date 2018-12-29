@@ -39,10 +39,10 @@ class Square extends Shape {
 }
 //List variables
 let allShapes = document.getElementById('allShapes');
-let squareBtn = document.getElementsByClassName('square');
-let rectangleBtn = document.getElementsByClassName('rectangle');
-let circleBtn = document.getElementsByClassName('circle');
-let triangleBtn = document.getElementsByClassName('triangle');
+let squareBtn = document.getElementsByClassName('square')[0];
+let rectangleBtn = document.getElementsByClassName('rectangle')[0];
+let circleBtn = document.getElementsByClassName('circle')[0];
+let triangleBtn = document.getElementsByClassName('triangle')[0];
 
 // All inputs
 let sideLength = document.getElementById('sideLength')
