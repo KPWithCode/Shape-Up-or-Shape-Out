@@ -8,11 +8,17 @@ class Shape {
 
     // Canvas Drawing
     draw() {
-
     let x = Math.floor(Math.random() * (600-this.width))
-    let y = Math.floor(Math.random() * (600-this.width))
+    let y = Math.floor(Math.random() * (600-this.height))
+    this.div.style.left = x + 'px';
+    this.div.style.top = y + 'px';
+    this.div.style.width = this.width + 'px';
+    this.div.style.height = this.height +'px';
+    allShapes.appendChild(this.div)
     }
-    // describe method
+    // Clicking on any shape should call a method named describe(), 
+    // which should update the statistics in the sidepanel in index.html
+
 }
 
 class Circle extends Shape {
@@ -23,8 +29,10 @@ class Circle extends Shape {
         //Doublclick function will remove
         this.div.addEventListener('dblclick', ()    =>  {
             this.remove();
-        })
-
+           
+        });
+         //Call draw function    
+         this.draw();
     }
 }
 
@@ -35,7 +43,11 @@ class Triangle extends Shape {
         //Doublclick function will remove
         this.div.addEventListener('dblclick', ()    =>  {
             this.remove();
-        })
+        });
+        // 0 Width and Height
+
+         //Call draw function    
+         this.draw();
     }
 }
 
@@ -47,7 +59,10 @@ class Rectangle extends Shape {
          //Doublclick function will remove
          this.div.addEventListener('dblclick', ()    =>  {
             this.remove();
-        })
+        });
+
+         //Call draw function    
+         this.draw();
     }
 }
 
@@ -56,11 +71,12 @@ class Square extends Shape {
         super(sideLength, sideLength);
         this.classList = 'square' 
         
-        
         //Doublclick function will remove
         this.div.addEventListener('dblclick', ()    =>  {
             this.remove();
-        })
+        });
+         //Call draw function    
+         this.draw();
     }
 }
 //List variables
