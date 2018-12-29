@@ -5,6 +5,14 @@ class Shape {
         this.div = document.createElement('div');
         this.div.classList.add('shape');
     }
+
+    // Canvas Drawing
+    draw() {
+
+    let x = Math.floor(Math.random() * (600-this.width))
+    let y = Math.floor(Math.random() * (600-this.width))
+    }
+    // describe method
 }
 
 class Circle extends Shape {
@@ -12,7 +20,10 @@ class Circle extends Shape {
         super(radius, radius);
         this.radius = radius;
         this.div.classList.add('circle');
-
+        //Doublclick function will remove
+        this.div.addEventListener('dblclick', ()    =>  {
+            this.remove();
+        })
 
     }
 }
@@ -20,6 +31,11 @@ class Circle extends Shape {
 class Triangle extends Shape {
     constructor(height) {
         super(height, height)
+        this.div.classList('triangle');
+        //Doublclick function will remove
+        this.div.addEventListener('dblclick', ()    =>  {
+            this.remove();
+        })
     }
 }
 
@@ -28,13 +44,23 @@ class Rectangle extends Shape {
         super(width, height);
         this.div.classList = 'rectangle';
 
+         //Doublclick function will remove
+         this.div.addEventListener('dblclick', ()    =>  {
+            this.remove();
+        })
     }
 }
 
 class Square extends Shape {
     constructor(sideLength) {
         super(sideLength, sideLength);
-        this.classList = 'square'
+        this.classList = 'square' 
+        
+        
+        //Doublclick function will remove
+        this.div.addEventListener('dblclick', ()    =>  {
+            this.remove();
+        })
     }
 }
 //List variables
