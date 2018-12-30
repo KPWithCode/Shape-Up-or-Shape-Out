@@ -1,7 +1,7 @@
 class Shape {
-    constructor(height, width) {
-        this.height = height;
+    constructor(width, height) {
         this.width = width;
+        this,height = height;
         this.div = document.createElement('div');
         this.div.classList.add('shape');
     }
@@ -12,8 +12,8 @@ class Shape {
     let y = Math.floor(Math.random() * (600-this.height))
     this.div.style.left = x + 'px';
     this.div.style.top = y + 'px';
-    this.div.style.width = this.width + 'px';
-    this.div.style.height = this.height +'px';
+    this.div.style.width = this.width + ' px ';
+    this.div.style.height = this.height +' px ';
     allShapes.appendChild(this.div)
     }
     // Clicking on any shape should call a method named describe(), 
@@ -45,7 +45,8 @@ class Triangle extends Shape {
             this.remove();
         });
         // 0 Width and Height
-
+        this.div.style.width = 0;
+        this.div.style.height = 0;
          //Call draw function    
          this.draw();
     }
@@ -70,6 +71,7 @@ class Square extends Shape {
     constructor(sideLength) {
         super(sideLength, sideLength);
         this.classList = 'square' 
+        
         
         //Doublclick function will remove
         this.div.addEventListener('dblclick', ()    =>  {
