@@ -29,9 +29,9 @@ input {
     position: relative;
 }
 
-#allShapes>.triangle{
-    border-top: 50px solid bisque ;
-    border-left: 50px solid transparent;
+#allShapes .triangle{
+    border-top: 40px solid bisque ;
+    border-left: 40px solid transparent;
     width: 0px;
     height: 0px;
     position: absolute;
