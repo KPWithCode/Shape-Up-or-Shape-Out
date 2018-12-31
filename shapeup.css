@@ -29,6 +29,14 @@ input {
     position: relative;
 }
 
+#allShapes>.triangle{
+    border-top: 50px solid bisque ;
+    border-left: 50px solid transparent;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+}
+
 .square {
 
     background-color: red;
@@ -62,8 +70,12 @@ input {
     color: black;
     position: absolute;
     margin-top: 80px;
+    
 
 }
+
+
+
 
 .sidebar {
     position: absolute;
