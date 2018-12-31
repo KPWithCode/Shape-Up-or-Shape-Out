@@ -28,7 +28,7 @@ class Circle extends Shape {
         this.div.classList.add('circle');
         //Doublclick function will remove
         this.div.addEventListener('dblclick', ()    =>  {
-            this.remove();
+            this.div.remove();
            
         });
          //Call draw function    
@@ -42,7 +42,7 @@ class Triangle extends Shape {
         this.div.classList.add('triangle');
         //Doublclick function will remove
         this.div.addEventListener('dblclick', ()    =>  {
-            this.remove();
+            this.div.remove();
         });
         // 0 Width and Height
         this.div.style.width = 0;
@@ -59,7 +59,7 @@ class Rectangle extends Shape {
 
          //Doublclick function will remove
          this.div.addEventListener('dblclick', ()    =>  {
-            this.remove();
+            this.div.remove();
         });
 
          //Call draw function    
@@ -75,7 +75,7 @@ class Square extends Shape {
         
         //Doublclick function will remove
         this.div.addEventListener('dblclick', ()    =>  {
-            this.remove();
+            this.div.remove();
         });
          //Call draw function    
          this.draw();
@@ -101,7 +101,7 @@ squareBtn.addEventListener('click', () =>  {
 
 });
 rectangleBtn.addEventListener('click', () =>  {
-    new Rectangle(rectangleHeight.value)
+    new Rectangle(rectangleHeight.value, rectangleWidth.value)
 
 });
 circleBtn.addEventListener('click', () =>  {
