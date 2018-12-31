@@ -12,8 +12,8 @@ class Shape {
     let y = Math.floor(Math.random() * (600-this.height))
     this.div.style.left = (x + 'px');
     this.div.style.top = (y + 'px')
-    this.div.style.width = (this.width + ' px ');
-    this.div.style.height = (this.height +' px ');
+    this.div.style.width = (this.width + 'px');
+    this.div.style.height = (this.height +'px');
     allShapes.appendChild(this.div)
     }
     // Clicking on any shape should call a method named describe(), 
@@ -89,26 +89,26 @@ let circleBtn = document.getElementsByClassName('circle')[0];
 let triangleBtn = document.getElementsByClassName('triangle')[0];
 
 // All inputs
-let sideLength = document.getElementById('sideLength')
-let rectangleHeight = document.getElementById('rectHeight')
-let rectangleWidth = document.getElementById('rectWidth')
-let circleRadius = document.getElementById('circleRadius')
-let triangleHeight = document.getElementById('triHeight')
+let sideLength = document.getElementById('sideLength');
+let rectangleHeight = document.getElementById('rectHeight');
+let rectangleWidth = document.getElementById('rectWidth');
+let circleRadius = document.getElementById('circleRadius');
+let triangleHeight = document.getElementById('triHeight');
 
 //Buttons 
 squareBtn.addEventListener('click', () =>  {
     new Square(sideLength.value)
 
-})
+});
 rectangleBtn.addEventListener('click', () =>  {
     new Rectangle(rectangleHeight.value)
 
-})
+});
 circleBtn.addEventListener('click', () =>  {
     new Circle(circleRadius.value)
 
-})
+});
 triangleBtn.addEventListener('click', () =>  {
     new Triangle(triangleHeight.value)
 
-})
+});
