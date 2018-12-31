@@ -51,6 +51,7 @@ input {
     color: black;
     position: absolute;
     margin-top: 25px;
+    border-radius: 50%;
 
 
 }
