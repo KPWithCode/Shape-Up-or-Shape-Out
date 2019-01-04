@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.height = height;
             this.div = document.createElement('div');
             // this.div.classList.add('shape');
+            this.div.addEventListener('click', ()   =>  {
+                this.describe()
+            })
         }
 
         // Canvas Drawing
@@ -24,12 +27,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // Clicking on any shape should call a method named describe(), 
         // which should update the statistics in the sidepanel in index.html
 
-        describe() {
-
+        describe(name,height,width) {
+           
+            sideShape.innerHTML = name;
+            sideHeight.innerHTML = height + 'px';
+            sideWidth.innerHTML= width + 'px';
         }
-
-
-
 
     }
 
@@ -38,6 +41,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
             super(radius, radius);
             this.radius = radius;
             this.div.classList.add('circle');
+            // Single click event listener
+            this.div.addEventListener("click", ()   =>  {
+                // return this.describe(this.classList,this.radius)   
+               
+            });
+           
             //Doublclick function will remove
             this.div.addEventListener('dblclick', () => {
                 this.div.remove();
@@ -48,13 +57,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.draw();
         }
 
-
+        
     }
 
     class Triangle extends Shape {
         constructor(height) {
             super(height, height)
             this.div.classList.add('triangle');
+            // Single click event listener
+            this.div.addEventListener("click", ()   =>  {
+                this.describe(this.div.classList('triangle'),this.height,this.width)
+                
+            });
             //Doublclick function will remove
             this.div.addEventListener('dblclick', () => {
                 this.div.remove();
@@ -72,6 +86,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
             super(width, height);
             this.div.classList.add('rectangle');
 
+            // Single click event listener
+            this.div.addEventListener("click", ()   =>  {
+                this.describe(document.getElementsByClassName('rectangle')[0],this.height,this.width);
+                sideArea.innerHTML = this.height * this.weight
+                sidePer.innerHTML = this.height * 2 + this.width * 2
+            });
+
             //Doublclick function will remove
             this.div.addEventListener('dblclick', () => {
                 this.div.remove();
@@ -87,6 +108,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
             super(sideLength, sideLength);
             this.div.classList.add('square');
 
+            // Single click event listener
+            this.div.addEventListener("click", ()   =>  {
+                this.describe(this.div.classList('square'),this.sideLength,this.sideLength)
+                
+            });
 
             //Doublclick function will remove
             this.div.addEventListener('dblclick', () => {
@@ -102,6 +128,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let rectangleBtn = document.getElementsByClassName('rectangle')[0];
     let circleBtn = document.getElementsByClassName('circle')[0];
     let triangleBtn = document.getElementsByClassName('triangle')[0];
+    let sideShape = document.getElementById('sideShape')
+    let sideHeight = document.getElementById('sideHeight')
+    let sideWidth = document.getElementById('sideWidth')
+    let sideRadius = document.getElementById('sideRadius')
+    let sideArea = document.getElementById('sideArea')
+    let sidePer = document.getElementById('sidePerimeter')
 
     // All inputs
     let sideLength = document.getElementById('sideLength');
