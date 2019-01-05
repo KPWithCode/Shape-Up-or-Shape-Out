@@ -4,8 +4,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.width = width;
             this.height = height;
             this.div = document.createElement('div');
-             // Possibly unnecessary
-            // this.div.classList.add('shape');
+            allShapes.appendChild(this.div)
+            this.div.classList.add('shape');
+            // Possibly unnecessary
             // this.div.addEventListener('click', ()   =>  {
             //     this.describe()
             // })
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.div.style.top = (y + 'px')
             this.div.style.width = (this.width + 'px');
             this.div.style.height = (this.height + 'px');
-            allShapes.appendChild(this.div)
+            
             if (this.width > 600 || this.height > 600) {
                 alert('Try Again')
             }
