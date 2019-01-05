@@ -4,10 +4,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.width = width;
             this.height = height;
             this.div = document.createElement('div');
+             // Possibly unnecessary
             // this.div.classList.add('shape');
-            this.div.addEventListener('click', ()   =>  {
-                this.describe()
-            })
+            // this.div.addEventListener('click', ()   =>  {
+            //     this.describe()
+            // })
         }
 
         // Canvas Drawing
@@ -30,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         describe(name,height,width) {
            
             sideShape.innerHTML = name;
-            sideHeight.innerHTML = height + 'px';
-            sideWidth.innerHTML= width + 'px';
+            sideHeight.innerHTML = height + ' px ';
+            sideWidth.innerHTML= width + ' px ';
         }
 
     }
@@ -43,8 +44,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.div.classList.add('circle');
             // Single click event listener
             this.div.addEventListener("click", ()   =>  {
-                // return this.describe(this.classList,this.radius)   
+               this.describe(' Circle ',this.radius, this.radius)   
                
+               sidePer.innerHTML = ( this.height * 2) + ( this.width * 2) + ' px'
+               sideRadius.innerHTML = this.width / 2 + ' px'
             });
            
             //Doublclick function will remove
@@ -66,16 +69,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.div.classList.add('triangle');
             // Single click event listener
             this.div.addEventListener("click", ()   =>  {
-                this.describe(this.div.classList('triangle'),this.height,this.width)
-                
+                this.describe(('Triangle'),this.height ,this.height)
+                sideArea.innerHTML = 0.5 * (this.height * this.height)
+                sidePer.innerHTML = 2 * this.height +(Math.sqrt(2)) * height
+                sideRadius.innerHTML = ' N/A ';
             });
             //Doublclick function will remove
             this.div.addEventListener('dblclick', () => {
                 this.div.remove();
             });
             // 0 Width and Height
-            this.div.style.width = 0;
-            this.div.style.height = 0;
+            this.div.style.backgroundColor = 'bisque';
+            this.div.style.borderRightWidth = this.height + 'px';
+            this.div.style.borderBottomWidth = this.height + 'px';
+            this.width = 0;
+     
             //Call draw function    
             this.draw();
         }
@@ -88,9 +96,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             // Single click event listener
             this.div.addEventListener("click", ()   =>  {
-                this.describe(document.getElementsByClassName('rectangle')[0],this.height,this.width);
-                sideArea.innerHTML = this.height * this.weight
-                sidePer.innerHTML = this.height * 2 + this.width * 2
+                this.describe('Rectangle',this.height,this.width);
+                sideArea.innerHTML = (height * width + ' px')
+                sidePer.innerHTML = ( this.height * 2) + ( this.width * 2) + ' px'
+                sideRadius.innerHTML = ' N/A ';
             });
 
             //Doublclick function will remove
@@ -110,8 +119,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             // Single click event listener
             this.div.addEventListener("click", ()   =>  {
-                this.describe(this.div.classList('square'),this.sideLength,this.sideLength)
-                
+                this.describe(('Square'),this.sideLength + ' px',this.sideLength + ' px')
+                sideHeight.innerHTML = sideLength;
+                sideWidth.innerHTML = sideLength;
+                sidePer.innerHTML = 4 * sideLength
+                sideRadius.innerHTML =  ' N/A ';
+                sideArea.innerHTML = sideLength * sideLength
             });
 
             //Doublclick function will remove
@@ -159,11 +172,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
     triangleBtn.addEventListener('click', () => {
-        if (triangleHeight > 0) {
-            triangleHeight.value = 0;
-        } else {
-            triangleHeight.value = 0;
-        }
+        // if (triangleHeight > 0) {
+        //     triangleHeight.value = 0;
+        // } else {
+        //     triangleHeight.value = 0;
+        // }
         new Triangle(triangleHeight.value)
     });
     //End of DOM tag

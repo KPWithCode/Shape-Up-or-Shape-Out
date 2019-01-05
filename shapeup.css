@@ -32,11 +32,11 @@ input {
 }
 
 #allShapes>.triangle {
-    border-top: 40px solid bisque;
-    border-left: 40px solid transparent;
-    width: 0px;
-    height: 0px;
     position: absolute;
+    border-bottom-style: solid;
+    border-bottom-color: yellow;
+    border-right-style: solid;
+    border-right-color: transparent;
 }
 
 .square {
@@ -51,8 +51,7 @@ input {
     background-color: green;
     color: black;
     position: absolute;
-    /* width: 300px;
-    height: 100px; */
+   
 }
 
 .circle {
@@ -90,5 +89,6 @@ input {
 li {
     display: flex;
     align-content: space-between;
-    margin-top: 10px
+    margin-top: 10px;
+    margin-right: 2px;
 }
