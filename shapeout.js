@@ -44,10 +44,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.div.classList.add('circle');
             // Single click event listener
             this.div.addEventListener("click", ()   =>  {
-               this.describe(' Circle ',this.radius, this.radius)   
-               
+               this.describe(' Circle ',this.height, this.height)   
+               sideArea.innerHTML = (3.14159 * Math.pow(this.height /2, 2)) + ' px '
                sidePer.innerHTML = ( this.height * 2) + ( this.width * 2) + ' px'
-               sideRadius.innerHTML = this.width / 2 + ' px'
+               sideRadius.innerHTML = (this.height / 2) + ' px'
             });
            
             //Doublclick function will remove
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.div.addEventListener('dblclick', () => {
                 this.div.remove();
             });
-            // 0 Width and Height
+            
             this.div.style.backgroundColor = 'bisque';
             this.div.style.borderRightWidth = this.height + 'px';
             this.div.style.borderBottomWidth = this.height + 'px';
@@ -120,11 +120,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
             // Single click event listener
             this.div.addEventListener("click", ()   =>  {
                 this.describe(('Square'),this.sideLength + ' px',this.sideLength + ' px')
-                sideHeight.innerHTML = sideLength;
-                sideWidth.innerHTML = sideLength;
-                sidePer.innerHTML = 4 * sideLength
+                sideHeight.innerHTML = sideLength + ' px ';
+                sideWidth.innerHTML = sideLength + ' px ';
+                sidePer.innerHTML = 4 * sideLength + ' px '
                 sideRadius.innerHTML =  ' N/A ';
-                sideArea.innerHTML = sideLength * sideLength
+                sideArea.innerHTML = sideLength * sideLength + ' px '
             });
 
             //Doublclick function will remove
@@ -172,11 +172,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
     triangleBtn.addEventListener('click', () => {
-        // if (triangleHeight > 0) {
-        //     triangleHeight.value = 0;
-        // } else {
-        //     triangleHeight.value = 0;
-        // }
         new Triangle(triangleHeight.value)
     });
     //End of DOM tag
