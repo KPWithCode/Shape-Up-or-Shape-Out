@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 this.describe(('Triangle'),this.height ,this.height)
                 sideArea.innerHTML = 0.5 * (this.height * this.height)
                 sidePer.innerHTML = 2 * this.height +(Math.sqrt(2)) * height
-                sideRadius.innerHTML = ' N/A ';
+                sideRadius.innerHTML = ' Not A Circle ';
             });
             //Doublclick function will remove
             this.div.addEventListener('dblclick', () => {
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 this.describe('Rectangle',this.height,this.width);
                 sideArea.innerHTML = (height * width + ' px')
                 sidePer.innerHTML = ( this.height * 2) + ( this.width * 2) + ' px'
-                sideRadius.innerHTML = ' N/A ';
+                sideRadius.innerHTML = ' Not A Circle ';
             });
 
             //Doublclick function will remove
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 sideHeight.innerHTML = sideLength + ' px ';
                 sideWidth.innerHTML = sideLength + ' px ';
                 sidePer.innerHTML = 4 * sideLength + ' px '
-                sideRadius.innerHTML =  ' N/A ';
+                sideRadius.innerHTML =  ' Not A Circle';
                 sideArea.innerHTML = sideLength * sideLength + ' px '
             });
 
